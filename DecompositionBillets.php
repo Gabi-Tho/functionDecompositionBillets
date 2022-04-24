@@ -1,39 +1,61 @@
 <?php
 
-$hundredBills = $money2/100;
-settype($hundredBills, "integer");
-echo $hundredBills." "."billets de 100"."<br>";
-$money2 = $money2 % 100;
+$money = 3844;
 
-$fiftyBills = $money2/50;
+$hundredBills = $money/100;
+settype($hundredBills, "integer");
+if($hundredBills != 0){
+    echo $hundredBills." "."billets de 100"."<br>";
+    $money = $money % 100;
+}
+
+
+$fiftyBills = $money/50;
 settype($fiftyBills, "integer");
-echo $fiftyBills." "."billets de 50"."<br>";
-$money2 = $money2 % 50;
+if($fiftyBills != 0){
+    settype($fiftyBills, "integer");
+    echo $fiftyBills." "."billets de 50"."<br>";
+    $money = $money % 20;
+}
+
 
 $twentyBills = $money/20;
 settype($twentyBills, "integer");
-echo $twentyBills." "."billets de 20"."<br>";
-$money = $money % 20;
+if($twentyBills != 0){
+    settype($twentyBills, "integer");
+    echo $twentyBills." "."billets de 20"."<br>";
+    $money = $money % 20;
+}
 
-$tenBills = $money2/10;
+
+$tenBills = $money/10;
 settype($tenBills, "integer");
-echo $tenBills." "."billets de 10"."<br>";
-$money2 = $money2 % 10;
+if($tenBills != 0){
+    echo $tenBills." "."billets de 10"."<br>";
+$money = $money % 10;
+}
 
-$fiveBills = $money2/5;
+
+$fiveBills = $money/5;
 settype($fiveBills, "integer");
-echo $fiveBills." "."billets de 5"."<br>";
-$money2 = $money2 % 5;
-echo $money2;
+if($fiveBills != 0){
+    echo $fiveBills." "."billets de 5"."<br>";
+$money = $money % 5;
+}
+
 
 $twoBills = $money/2;
 settype($twoBills, "integer");
-$money2 = $money2 % 2;
-echo $twoBills." "."billets de 2"."<br>";
+if($twoBills != 0){
+    $money = $money % 2;
+    echo $twoBills." "."billets de 2"."<br>";
+}
 
-$oneBills = $money2/1;
-settype($fiveBills, "integer");
-$money2 = $money2 % 2;
-echo $oneBills." "."billet de 1"."<br>";
+$oneBills = $money/1;
+settype($oneBills, "integer");
+if($oneBills != 0){
+    $money = $money % 1;
+    echo $oneBills." "."billet de 1"."<br>";
+}
 
 ?>
