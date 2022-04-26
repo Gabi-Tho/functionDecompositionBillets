@@ -1,5 +1,7 @@
 <?php
 
+test commit
+
 function decompositionBillet($money){
     $hundredBills = $money/100;
     settype($hundredBills, "integer");
